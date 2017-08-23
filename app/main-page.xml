@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:lv="nativescript-telerik-ui/listview"
+      navigatingTo="navigatingTo"
+      class="page">
+    <lv:RadListView items="{{ items }}" loadOnDemandMode="Auto" loadMoreDataRequested="loadMore">
+        <lv:RadListView.listViewLayout>
+            <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="50" spanCount="2"/>
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemTemplate>
+            <Label text="{{ name }}" textAlignment="center" backgroundColor="#7fffd4" margin="5"/>
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
+</Page>
