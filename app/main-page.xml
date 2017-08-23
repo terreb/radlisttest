@@ -2,7 +2,7 @@
       xmlns:lv="nativescript-telerik-ui/listview"
       navigatingTo="navigatingTo"
       class="page">
-    <lv:RadListView items="{{ items }}" loadOnDemandMode="Auto" loadMoreDataRequested="loadMore">
+    <lv:RadListView id="list" items="{{ items }}" loadOnDemandMode="Auto" loadMoreDataRequested="loadMore">
         <lv:RadListView.listViewLayout>
             <lv:ListViewGridLayout scrollDirection="Vertical" itemHeight="50" spanCount="2"/>
         </lv:RadListView.listViewLayout>

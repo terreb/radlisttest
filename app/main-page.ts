@@ -1,13 +1,14 @@
 import { HelloWorldModel } from './main-view-model'
 
-let vm
+let vm, page
 
 export function navigatingTo( args ) {
-    const page = args.object
+    page = args.object
     page.bindingContext = vm = new HelloWorldModel()
 }
 
 export function loadMore() {
-    console.log('lod more')
+    console.log('load more')
     vm.addNewItems()
+    page.getViewById('list').notifyLoadOnDemandFinished()
 }
